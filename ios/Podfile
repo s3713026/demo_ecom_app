@@ -33,3 +33,13 @@ target 'ecom_app' do
     )
   end
 end
+
+pre_install do |installer|
+  installer.pod_targets.each do |pod|
+    if pod.name == 'mParticle-Apple-SDK'
+      def pod.build_type;
+        Pod::BuildType.new(:linkage => :dynamic, :packaging => :framework)
+      end
+    end
+  end
+end

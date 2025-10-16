@@ -8,6 +8,9 @@ PODS:
   - hermes-engine (0.78.1):
     - hermes-engine/Pre-built (= 0.78.1)
   - hermes-engine/Pre-built (0.78.1)
+  - mParticle-Apple-SDK (8.39.0):
+    - mParticle-Apple-SDK/mParticle (= 8.39.0)
+  - mParticle-Apple-SDK/mParticle (8.39.0)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1238,6 +1241,30 @@ PODS:
     - React-jsiexecutor
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
+  - react-native-mparticle (2.8.1):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - mParticle-Apple-SDK (~> 8.0)
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - react-native-netinfo (11.4.1):
+    - React-Core
   - react-native-safe-area-context (5.3.0):
     - DoubleConversion
     - glog
@@ -1721,6 +1748,8 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
+  - react-native-mparticle (from `../node_modules/react-native-mparticle`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1757,6 +1786,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - mParticle-Apple-SDK
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1835,6 +1865,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   React-microtasksnativemodule:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
+  react-native-mparticle:
+    :path: "../node_modules/react-native-mparticle"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-NativeModulesApple:
@@ -1910,6 +1944,7 @@ SPEC CHECKSUMS:
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: eb93e2f488219332457c3c4eafd2738ddc7e80b8
   hermes-engine: f493b0a600aed5dc06532141603688a30a5b2f61
+  mParticle-Apple-SDK: 7c82471c57c87366f5cab7bd3554ac0a38885c71
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: 082fbc90409015eac1366795a0b90f8b5cb28efe
   RCTRequired: ca966f4da75b62ce3ea8c538d82cb5ecbb06f12a
@@ -1940,6 +1975,8 @@ SPEC CHECKSUMS:
   React-logger: 74ddb793d36b48bba176328c7af75e5e656fd405
   React-Mapbuffer: 39e87693178fd6483bb5ca8b851fae362d49409a
   React-microtasksnativemodule: b740ebae7fad70aa78bc24cc0dfc15ac9637b6eb
+  react-native-mparticle: e690e32a04caef6383daab17eaa2e955e2ffaeb8
+  react-native-netinfo: cec9c4e86083cb5b6aba0e0711f563e2fbbff187
   react-native-safe-area-context: 0f14bce545abcdfbff79ce2e3c78c109f0be283e
   React-NativeModulesApple: af0571ac115d09c9a669ed45ce6a4ca960598a2d
   React-perflogger: 26d07766b033f84559bd520e949453dba8bf1cd8
@@ -1975,6 +2012,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: b94ff2d7559cb66837c97a3f394ddb817faad4d6
 
-PODFILE CHECKSUM: 5b3ac118b59897672d0cb31715363bbc6d6ea1e6
+PODFILE CHECKSUM: dbed1262e0a29c7c80affecff639ffe30e01a7e2
 
 COCOAPODS: 1.16.2
