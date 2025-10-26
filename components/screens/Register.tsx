@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { View, Alert, StyleSheet } from "react-native";
 import { TextInput, Button, Text } from "react-native-paper";
 import { NavigationProp } from "@react-navigation/native";
+import { trackEvent, identifyUser} from "../utils/mixpanelClient"
+const CleverTap = require('clevertap-react-native');
 
 interface RegisterProps {
   navigation: NavigationProp<any>;
@@ -25,11 +27,21 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
     // Xử lý đăng ký thành công
     Alert.alert("Đăng ký thành công", "Bạn đã đăng ký thành công với số điện thoại và email");
     navigation.navigate("Home"); // Chuyển hướng đến trang Home sau khi đăng ký
+    trackEvent("User Registered", { 'Source': 'Mixpanel',
+          'email': email,
+          'phone': phone });
+    CleverTap.recordEvent(
+      'User Register', {
+          'Source': 'CleverTap',
+          'email': email,
+          'phone': phone
+      });
   };
 
   const handleSkip = () => {
     // Chuyển hướng đến trang Home mà không cần đăng ký
     navigation.navigate("Home");
+    trackEvent("Registration Skipped");
   };
 
   return (

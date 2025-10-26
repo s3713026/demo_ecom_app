@@ -1,5 +1,5 @@
 package com.ecom_app
-
+import com.clevertap.react.CleverTapApplication;
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -34,6 +34,7 @@ class MainApplication : Application(), ReactApplication {
     get() = getDefaultReactHost(applicationContext, reactNativeHost)
 
   override fun onCreate() {
+    CleverTapAPI.setDebugLevel(LogLevel.VERBOSE);
     super.onCreate()
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {

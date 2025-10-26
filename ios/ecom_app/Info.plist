@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CleverTapRegion</key>
+	<string>sg1</string>
+	<key>CleverTapEncryptionLevel</key>
+	<false/>
+	<key>CleverTapToken</key>
+	<string>cb3-424</string>
+	<key>CleverTapAccountID</key>
+	<string>4R4-K89-RZ7Z</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

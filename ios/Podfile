@@ -16,6 +16,8 @@ end
 
 target 'ecom_app' do
   config = use_native_modules!
+  use_frameworks!
+  pod 'clevertap-react-native', :path => '../node_modules/clevertap-react-native'
 
   use_react_native!(
     :path => config[:reactNativePath],
